@@ -16,11 +16,9 @@ class Projection {
   render() {
     d3.select(`#js-data-wrapper`)
         .html(`
+          <h1>${this.time} Hurricane Matthew Update</h1>
           <table>
             <tr>
-              <th>
-                Time:
-              </th>
               <th>
                 Position:
               </th>
@@ -32,9 +30,6 @@ class Projection {
               </th>
             </tr>
             <tr>
-              <td>
-                ${this.time}
-              </td>
               <td>
                 ${this.movement}
               </td>

@@ -10,9 +10,10 @@ th, td {
   text-align: left;
 }
 
+h1 {
+  text-align: center;
+}
+
 table {
-  @include media($medium-screen-up) {
-    @include span-columns(9 of 12);
-    @include shift(1.5);
-  }
+  margin: 0 auto;
 }
