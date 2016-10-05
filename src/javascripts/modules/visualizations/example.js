@@ -5,7 +5,6 @@ import * as pym from 'pym.js'
 
 class Projection {
   constructor(data) {
-    this.el = $(`js-data-wrapper`);
     this.hurricane = data.currenthurricane[0];
     this.currentData = this.hurricane.Current;
     this.time = this.currentData.Time.civil;
@@ -15,7 +14,39 @@ class Projection {
   }
 
   render() {
-
+    d3.select(`#js-data-wrapper`)
+        .html(`
+          <table>
+            <tr>
+              <th>
+                Time:
+              </th>
+              <th>
+                Position:
+              </th>
+              <th>
+                Maximum Winds:
+              </th>
+              <th>
+                Wind Gusts:
+              </th>
+            </tr>
+            <tr>
+              <td>
+                ${this.time}
+              </td>
+              <td>
+                ${this.movement}
+              </td>
+              <td>
+                ${this.windSpeed}
+              </td>
+              <td>
+                ${this.windGust}
+              </td>
+            </tr>
+          </table>
+        `)
   }
 }
 
