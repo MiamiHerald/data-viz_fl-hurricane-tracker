@@ -7,26 +7,27 @@ class Projection {
   constructor(data) {
     this.hurricane = data.currenthurricane[0];
     this.currentData = this.hurricane.Current;
-    this.time = this.currentData.Time.civil;
-    this.windSpeed = `${this.currentData.WindSpeed.Mph} Mph`
-    this.windGust = `${this.currentData.WindGust.Mph} Mph`
-    this.movement = `${this.currentData.Movement.Text} at ${this.currentData.Fspeed.Mph} Mph`
+    this.time = `${this.currentData.Time.civil.replace(":00 PM", "")} p.m.`;
+    this.windSpeed = `${this.currentData.WindSpeed.Mph} mph`;
+    this.windGust = `${this.currentData.WindGust.Mph} mph`;
+    this.movement = `${this.currentData.Movement.Text} at ${this.currentData.Fspeed.Mph} mph`;
+    console.log(this.currentData);
   }
 
   render() {
     d3.select(`#js-data-wrapper`)
         .html(`
-          <h1>${this.time} Hurricane Matthew Update</h1>
+          <h1>${this.time} Hurricane Matthew update</h1>
           <table>
             <tr>
               <th>
                 Position:
               </th>
               <th>
-                Maximum Winds:
+                Max winds:
               </th>
               <th>
-                Wind Gusts:
+                Wind gusts:
               </th>
             </tr>
             <tr>
@@ -46,7 +47,8 @@ class Projection {
 }
 
 const loadExample = () => {
-  $.getJSON(`http://api.wunderground.com/api/147b31846a27b039/currenthurricane/forecast/q/FL/Miami.json`, (data) => {
+  // $.getJSON(`http://api.wunderground.com/api/147b31846a27b039/currenthurricane/forecast/q/FL/Miami.json`, (data) => {
+  $.getJSON(`http://pubsys.miamiherald.com/static/media/projects/2016/hurricane-matthew/data/wu.json`, (data) => {
     new Projection(data).render();
   });
 }
