@@ -41,19 +41,6 @@ class Projection {
             </tr>
           </table>
         `)
-
-    $(window).on(`load`, () => {
-      this.pymChild = new pym.Child({ renderCallback: this.resizeChoropleth.bind(this) });
-    });
-    $(window).on(`resize`, this.resizeChoropleth.bind(this));
-  }
-
-  resizeChoropleth() {
-    window.requestAnimationFrame(() => {
-      if (this.pymChild) {
-        this.pymChild.sendHeight();
-      }
-    });
   }
 }
 
