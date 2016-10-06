@@ -17,7 +17,7 @@
       <script type="text/javascript">
         window.onload = function() {
           window.iframeChild = new pym.Child();
-          iframeChild.sendHeight();
+          iframeChild.sendMessage('childLoaded', 'ready');
         }
       </script>
     {% endblock %}

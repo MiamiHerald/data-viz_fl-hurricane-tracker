@@ -1,7 +1,4 @@
 import $ from 'jquery';
-import * as d3 from 'd3';
-import * as topojson from 'topojson';
-import * as pym from 'pym.js'
 
 class Projection {
   constructor(data) {
@@ -14,7 +11,7 @@ class Projection {
   }
 
   render() {
-    d3.select(`#js-data-wrapper`)
+    $(`#js-data-wrapper`)
         .html(`
           <h1>${this.time} Hurricane Matthew update</h1>
           <table>
@@ -46,8 +43,8 @@ class Projection {
 }
 
 const loadExample = () => {
-  // $.getJSON(`http://api.wunderground.com/api/147b31846a27b039/currenthurricane/forecast/q/FL/Miami.json`, (data) => {
-  $.getJSON(`http://pubsys.miamiherald.com/static/media/projects/2016/hurricane-matthew/data/wu.json`, (data) => {
+  $.getJSON(`http://api.wunderground.com/api/147b31846a27b039/currenthurricane/forecast/q/FL/Miami.json`, (data) => {
+  // $.getJSON(`http://pubsys.miamiherald.com/static/media/projects/2016/hurricane-matthew/data/wu.json`, (data) => {
     new Projection(data).render();
   });
 }
