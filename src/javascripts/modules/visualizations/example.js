@@ -7,7 +7,7 @@ class Projection {
   constructor(data) {
     this.hurricane = data.currenthurricane[0];
     this.currentData = this.hurricane.Current;
-    this.time = `${this.currentData.Time.civil.replace(":00 PM", "")} p.m.`;
+    this.time = `${this.currentData.Time.civil.replace(":00 AM", "")} a.m.`;
     this.windSpeed = `${this.currentData.WindSpeed.Mph} mph`;
     this.windGust = `${this.currentData.WindGust.Mph} mph`;
     this.movement = `${this.currentData.Movement.Text} at ${this.currentData.Fspeed.Mph} mph`;
