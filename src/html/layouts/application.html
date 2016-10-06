@@ -16,8 +16,8 @@
       <script src="javascripts/app.js"></script>
       <script type="text/javascript">
         window.onload = function() {
-          window.iframeChild = new pym.Child();
-          iframeChild.sendHeightToParent();
+          var pymChild = new pym.Child();
+          iframeChild.sendHeight();
         }
       </script>
     {% endblock %}
