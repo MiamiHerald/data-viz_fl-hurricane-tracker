@@ -11,7 +11,6 @@ class Projection {
     this.windSpeed = `${this.currentData.WindSpeed.Mph} mph`;
     this.windGust = `${this.currentData.WindGust.Mph} mph`;
     this.movement = `${this.currentData.Movement.Text} at ${this.currentData.Fspeed.Mph} mph`;
-    console.log(this.currentData);
   }
 
   render() {
