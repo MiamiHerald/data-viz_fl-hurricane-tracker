@@ -1,0 +1,7 @@
+.hurricane-map {
+  @include size(300px 200px);
+  border: none;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto;
+}

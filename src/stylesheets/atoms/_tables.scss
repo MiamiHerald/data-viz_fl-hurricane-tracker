@@ -10,25 +10,10 @@ th, td {
   text-align: left;
 }
 
-h1 {
-  text-align: center;
-}
-
 table {
-  margin: 0 auto;
-}
+  margin: 0 auto 1rem;
 
-.table, .legend {
   @include media($medium-screen-up) {
-    @include span-columns(6 of 12);
+    margin: 0;
   }
-}
-
-.legend img {
-  max-width: 100%;
-  height: 111px;
-  padding-top: 20px;
-  padding-bottom: 5px;
-  margin: 0 auto;
-  display: block;
 }

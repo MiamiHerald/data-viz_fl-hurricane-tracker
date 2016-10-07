@@ -21,7 +21,7 @@ class Projection {
   render() {
     $(`#js-data-wrapper`)
         .html(`
-          <h1>${this.time} Hurricane Matthew update</h1>
+          <h2>${this.time} update</h2>
           <table>
             <tr>
               <th>
@@ -50,11 +50,11 @@ class Projection {
   }
 }
 
-const loadExample = () => {
-  // $.getJSON(`http://api.wunderground.com/api/147b31846a27b039/currenthurricane/forecast/q/FL/Miami.json`, (data) => {
-  $.getJSON(`http://pubsys.miamiherald.com/static/media/projects/2016/hurricane-matthew/data/wu.json`, (data) => {
+const loadWindData = () => {
+  $.getJSON(`http://api.wunderground.com/api/147b31846a27b039/currenthurricane/forecast/q/FL/Miami.json`, (data) => {
+  // $.getJSON(`http://pubsys.miamiherald.com/static/media/projects/2016/hurricane-matthew/data/wu.json`, (data) => {
     new Projection(data).render();
   });
 }
 
-export { loadExample };
+export { loadWindData };

@@ -30,6 +30,7 @@
     "bourbon": "^4.2.7",
     "bourbon-neat": "^1.8.0",
     "browser-sync": "2.11.1",
+    "cartodb": "^0.5.1",
     "chai": "3.5.0",
     "compression": "1.6.1",
     "d3": "^4.2.6",
