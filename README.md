@@ -1,4 +1,4 @@
-# Data-Viz: Starter
+# Data-Viz: Hurricane Matthew Tracker
 
 ## About
 
