@@ -2,7 +2,7 @@
 
 ## About
 
-This template will serve as a starting point for embedded data visualization projects for the Miami Herald.
+Hurricane Matthew tracking widget for Landing page Edit
 
 ## Installation
 
@@ -17,7 +17,7 @@ Extra additions include:
 Be sure to have node installed and that you are using Node `5.12.0` or earlier as there is an issue with Node 6. See [#302](https://github.com/vigetlabs/gulp-starter/issues/302).
 
 ```
-git clone https://github.com/MiamiHerald/data-viz_starter.git MyApp
+git clone https://github.com/MiamiHerald/data-viz_fl-hurricane-tracker.git MyApp
 cd MyApp
 npm install
 ```
